@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #ffc700;
+}
+
+html {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #fefefe;
+}
+
+p + p {
+  margin: 2rem 0;
+}
+
+p {
+  line-height: 1.62;
+  font-size: 1.075rem;
+}
+
+h2 {
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 900px) 1fr;
+  grid-gap: 1rem 2rem;
+  margin: 7rem 0;
+}
+
+.post > * {
+  grid-column: 2/-2;
+}
+
+.post-fig {
+  grid-column: 1/-1;
+}
+.post-fig-img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+.post-fig-caption {
+  margin-top: 1rem;
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+.post-subtitle {
+  text-align: center;
+}
+
+.post-quote {
+  background-color: #fafafa;
+  padding: 1rem 2rem;
+}
+.post-quote-left {
+  grid-column: 1/span 1;
+  text-align: right;
+  border-right: 3px solid var(--yellow);
+}
+.post-quote-right {
+  grid-column: -2/span 1;
+  text-align-last: left;
+  border-left: 3px solid var(--yellow);
+}
+.post-quote-para {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 42em) {
+  .post-quote-left {
+    grid-column: 2/-2;
+  }
+
+  .post-quote-right {
+    grid-column: 2/-2;
+  }
+
+  .post-fig-img {
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
